@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6, p, ol, ul {
 header img {
     display: block;
     max-width: 400px;
-    width: auto;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -72,6 +72,7 @@ header {
     background: linear-gradient(180deg, #0051B1 0%, #0074FF 54.16%, #009EFF 100%);
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .company__block-img img {
@@ -127,15 +128,11 @@ ul {
 
 /* PARTNERS */
 
-.partners {
-    margin-top: 150px;
-}
-
 h3 {
     color: #2A2A29;
     font-size: 36px;
     font-weight: 800;
-    margin-bottom: 100px;
+    margin: 150px 0 100px 0;
     text-align: center;
 }
 
@@ -143,6 +140,7 @@ h3 {
     display: flex;
     justify-content: space-around;
     margin-bottom: 200px;
+    flex-wrap: wrap;
 }
 
 .partners__content img {
@@ -191,14 +189,20 @@ h3 {
     margin-top: 30px;
 }
 
-.contacts__block:last-of-type {
+.contacts__block, .map {
     height: 645px;
+    max-width: 645px;
+    width: 100%;
 }
+
+.contacts__block {
+    width: 50%;
+}
+
 
 /* FOOTER */
 footer {
     background-color: #0051B1;
-    max-width: 1920px;
     width: 100%;
 }
 
@@ -228,6 +232,7 @@ footer p {
 .products__content {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .products__block {
@@ -258,4 +263,266 @@ footer p {
 
 .clear240 {
     height: 240px;
+}
+
+/* MEDIA */
+
+@media screen and (min-width: 800px) and (max-width: 1300px) {
+    header {
+        margin: 60px 0 90px 0;
+    }
+    h1 {
+        padding: 80px 0 20px 0;
+        font-size: 2em;
+    }
+    .company__block-text:first-of-type p {
+        padding-bottom: 65px;
+    }
+    .company .content {
+        flex-wrap: nowrap;
+        height: 550px;
+    }
+    .company__block-text {
+        padding: 0 30px;
+        width: 50%;
+    }
+    .company__block-img {
+        width: 50%;
+    }
+    .company .content:last-of-type {
+        margin-top: 50px;
+    }
+    h2 {
+        padding: 80px 0 25px 0;
+    }
+    .company li {
+        margin-bottom: 20px;
+    }
+    .company__block-text:last-of-type p {
+        padding-bottom: 60px;
+    }
+    .partners__content {
+        line-height: 3;
+        margin-bottom: 80px;
+    }
+    h3 {
+        margin: 70px 0;
+    }
+    .contacts h2 {
+        padding-top: 45px;
+    }
+    .contacts__block-text {
+        padding: 0 30px;
+        width: 50%;
+    }
+    .map {
+        height: 100%;
+        max-width: 800px;
+        width: 100%;
+    }
+    .contacts .content {
+        flex-wrap: nowrap;
+        height: 550px;
+    }
+    .contacts p:last-of-type {
+        padding-bottom: 50px;
+    }
+    .contacts {
+        margin-bottom: 100px;
+    }
+    .contacts__block {
+        width: 50%;
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 799px) {
+    header img {
+        max-width: 300px;
+    }
+    header {
+        margin: 35px 0 60px 0;
+    }
+    h1 {
+        padding: 60px 0 20px 0;
+        font-size: 2em;
+    }
+    .company__block-text:first-of-type p {
+        padding-bottom: 65px;
+        font-size: 0.9em;
+    }
+    .company .content {
+        flex-wrap: nowrap;
+        height: 400px;
+    }
+    .company__block-text {
+        padding: 0 30px;
+        width: 50%;
+    }
+    .company__block-img {
+        width: 50%;
+    }
+    h2 {
+        padding: 40px 0 25px 0;
+        font-size: 1.3em;
+    }
+    .company li {
+        margin-bottom: 20px;
+        font-size: 0.9em;
+    }
+    .company__block-text:last-of-type p {
+        padding-bottom: 60px;
+        font-size: 0.9em;
+    }
+    .partners__content {
+        line-height: 6;
+        margin-bottom: 80px;
+        padding: 0 30px;
+    }
+    h3 {
+        margin: 70px 0;
+    }
+    .contacts h2 {
+        padding-top: 45px;
+        font-size: 1.6em;
+    }
+    .contacts__block-text {
+        padding: 0 30px;
+        font-size: 0.9em;
+    }
+    .map {
+        height: 100%;
+        max-width: 800px;
+        width: 100%;
+    }
+    .contacts .content {
+        flex-wrap: nowrap;
+        height: 500px;
+    }
+    .contacts p:last-of-type {
+        padding-bottom: 50px;
+    }
+    .contacts {
+        margin-bottom: 100px;
+    }
+    .contacts__block {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    .map {
+        height: 500px;
+        width: 100%;
+    }
+    .contacts .content {
+        flex-wrap: wrap;
+    }
+    .contacts__block {
+        max-width: 700px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    header img {
+        max-width: 187px;
+    }
+    header {
+        margin: 35px 0 60px 0;
+    }
+    h1 {
+        padding: 60px 0 20px 0;
+        font-size: 2em;
+    }
+    .company__block-text:first-of-type p {
+        padding-bottom: 65px;
+        font-size: 0.9em;
+    }
+    .content {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .company__block-text {
+        padding: 0 30px;
+    }
+    .company .content:first-of-type {
+        flex-direction: column-reverse;
+    }
+    .company .content:last-of-type {
+        margin-top: 0;
+    }
+    h2 {
+        padding: 40px 0 25px 0;
+        font-size: 1.6em;
+    }
+    .company li {
+        margin-bottom: 25px;
+        font-size: 0.9em;
+    }
+    .company__block-text:last-of-type p {
+        padding-bottom: 60px;
+        font-size: 0.9em;
+    }
+    .partners__content {
+        line-height: 6;
+        margin-bottom: 80px;
+    }
+    h3 {
+        margin: 70px 0;
+    }
+    .contacts h2 {
+        padding-top: 45px;
+        font-size: 1.6em;
+    }
+    .contacts__block-text {
+        padding: 0 30px;
+        font-size: 0.9em;
+    }
+    .map {
+        height: 400px;
+        max-width: 800px;
+        width: 100%;
+    }
+    .contacts .content {
+        flex-wrap: wrap;
+    }
+    .contacts p:last-of-type {
+        padding-bottom: 50px;
+    }
+    .contacts__block, .map {
+        height: 400px;
+    }
+    .contacts {
+        margin-bottom: 0;
+    }
+    .contacts__block {
+        width: 100%;
+    }
+}
+    /* PARTNERS PAGE MEDIA */
+    @media screen and (max-width: 1300px) {
+        .partner img {
+            display: block;
+            margin: 0 auto;
+            float: none;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .logo {
+        margin: 30px auto 100px auto;
+        display: block;
+    }
+    
+    .products__content {
+        flex-direction: column;
+    }
+    
+    .products__block {
+        margin: 0 auto;
+    }
+    
+    .clear240 {
+        height: 80px;
+    }
 }
