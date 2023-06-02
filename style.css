@@ -507,11 +507,15 @@ footer p {
             margin: 0 auto;
             float: none;
         }
+        .logo {
+            width: 350px;
+        }
     }
     @media screen and (max-width: 500px) {
-        .logo {
+    .logo {
         margin: 30px auto 100px auto;
         display: block;
+        width: 280px;
     }
     
     .products__content {
